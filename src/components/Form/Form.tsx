@@ -21,7 +21,12 @@ export const Form: React.FC = () => {
     }
   };
   return (
-    <form name="test" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      onSubmit={handleSubmit}
+    >
       <input type="hidden" name="form-name" value="test" />
       <Input name="email" onChange={handleChange} value={email} />
       {status && <p>{status}</p>}
@@ -29,3 +34,19 @@ export const Form: React.FC = () => {
     </form>
   );
 };
+
+// Netlify Response
+// Successful
+// {
+//   body: {
+//     ReadableStream { locked: false }
+//     bodyUsed: false
+//     headers: Headers {  }
+//     ok: true
+//     redirected: false
+//     status: 200
+//     statusText: "OK"
+//     type: "basic"
+//     url: "https://main--dancing-wisp-96cb17.netlify.app/"
+//   }
+// }

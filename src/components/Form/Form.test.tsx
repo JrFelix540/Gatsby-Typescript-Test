@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { Form } from "./Form";
-import { server } from "../../../tests/__mocks__/server";
+import { server } from "../../tests/__mocks__/server";
 import { rest } from "msw";
 
 describe("Tests Form", () => {

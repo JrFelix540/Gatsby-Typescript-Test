@@ -27,7 +27,7 @@ export const Form: React.FC = () => {
       data-netlify="true"
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="test" />
+      {/* <input type="hidden" name="form-name" value="test" /> */}
       <Input name="email" onChange={handleChange} value={email} />
       {status && <p>{status}</p>}
       <Button type="submit">Submit</Button>

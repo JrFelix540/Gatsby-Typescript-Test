@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { sendNetlifyFormRequest } from "../../utils/network";
 import Button from "../Button/Button";
 import { Input } from "../Input/Input";
 
@@ -11,10 +12,7 @@ export const Form: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch("/", {
-      method: "POST",
-      body: JSON.stringify({ value }),
-    });
+    const response = await sendNetlifyFormRequest("contact", { email: value });
 
     if (response.ok) {
       setStatus("success");
@@ -23,7 +21,7 @@ export const Form: React.FC = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form name="test" method="POST" data-netlify="true" onSubmit={handleSubmit}>
       <Input name="test-form" onChange={handleChange} value={value} />
       {status && <p>{status}</p>}
       <Button type="submit">Submit</Button>

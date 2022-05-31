@@ -13,7 +13,7 @@ export const Form: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const response = await sendNetlifyFormRequest("contact", { email: value });
-
+    console.log(response);
     if (response.ok) {
       setStatus("success");
     } else {

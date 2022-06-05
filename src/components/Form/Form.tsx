@@ -12,7 +12,7 @@ export const Form: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await sendNetlifyFormRequest("test", { email: email });
+    const response = await sendNetlifyFormRequest("contact", { email: email });
     console.log(response);
     if (response.ok) {
       setStatus("success");
@@ -27,7 +27,7 @@ export const Form: React.FC = () => {
       data-netlify="true"
       onSubmit={handleSubmit}
     >
-      {/* <input type="hidden" name="form-name" value="test" /> */}
+      <input type="hidden" name="form-name" value="contact" />
       <Input name="email" onChange={handleChange} value={email} />
       {status && <p>{status}</p>}
       <Button type="submit">Submit</Button>

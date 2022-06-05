@@ -12,5 +12,6 @@ module.exports = {
   },
   setupFiles: [`<rootDir>/src/tests/loadershim.js`],
   setupFilesAfterEnv: [`<rootDir>/src/tests/setupTests.ts`],
+  resetMocks: true,
   testEnvironment: "jsdom",
 };

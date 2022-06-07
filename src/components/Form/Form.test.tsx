@@ -4,13 +4,13 @@ import React from "react";
 import { encode } from "../../utils/network";
 import { Form } from "./Form";
 
+jest.mock("../../utils/network", () => ({
+  sendNetlifyFormRequest: jest.fn(() => Promise.resolve({ ok: true })),
+}));
+
 describe("Tests Form", () => {
   test("tests success", async () => {
     render(<Form />);
-    jest.mock("../../utils/network", () => ({
-      sendNetlifyFormRequest: jest.fn(() => Promise.resolve({ ok: true })),
-    }));
-
     await userEvent.type(screen.getByRole("textbox"), "Luke Skywalker");
     fireEvent.click(screen.getByRole("button"));
     expect(await screen.findByText("success")).toBeVisible();

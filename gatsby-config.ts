@@ -1,7 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
 require("dotenv").config({
-  path: `.env.development`,
+  path: `.env.production`,
 });
 
 const config: GatsbyConfig = {

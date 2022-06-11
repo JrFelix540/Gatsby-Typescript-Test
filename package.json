@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "A Gatsby starter written in TypeScript with no plugins and a single welcome page.",
-  "author": "Jude Agboola",
+  "author": "Junior Felix",
   "keywords": [
     "gatsby"
   ],
@@ -14,7 +14,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "test:unit": "jest"
+    "test:unit": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "license": "0BSD",
   "dependencies": {
@@ -23,7 +25,16 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12",
+    "@storybook/addon-actions": "^6.5.8",
+    "@storybook/addon-essentials": "^6.5.8",
+    "@storybook/addon-interactions": "^6.5.8",
+    "@storybook/addon-links": "^6.5.8",
+    "@storybook/builder-webpack5": "^6.5.8",
+    "@storybook/manager-webpack5": "^6.5.8",
+    "@storybook/react": "^6.5.8",
+    "@storybook/testing-library": "^0.0.12",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.2.0",
@@ -32,6 +43,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "babel-jest": "^28.1.0",
+    "babel-loader": "^8.2.5",
     "babel-preset-gatsby": "^2.14.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
     "jest": "^28.1.0",

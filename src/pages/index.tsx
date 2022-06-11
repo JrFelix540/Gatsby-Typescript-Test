@@ -130,7 +130,7 @@ const links = [
 // markup
 const IndexPage = () => {
   const handleClick = () => {
-    console.log("boom");
+    console.log("testing:", process.env.CHROMATIC_PROJECT_TOKEN);
   };
   return (
     <main style={pageStyles}>

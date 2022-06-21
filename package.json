@@ -16,8 +16,7 @@
     "typecheck": "tsc --noEmit",
     "test:unit": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic"
+    "build-storybook": "build-storybook"
   },
   "license": "0BSD",
   "dependencies": {
@@ -46,7 +45,6 @@
     "babel-jest": "^28.1.0",
     "babel-loader": "^8.2.5",
     "babel-preset-gatsby": "^2.14.0",
-    "chromatic": "^6.5.6",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
